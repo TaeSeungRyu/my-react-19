@@ -1,5 +1,15 @@
 import { Outlet } from "react-router";
-import { Welcome } from "../welcome/welcome";
+import type { Route } from "./+types/head";
+
+//서버사이드 흉내내 보기
+export async function loader({ params }: Route.LoaderArgs) {
+  const result = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ name: "head-layout", params });
+    }, 1000);
+  });
+  return { params: result };
+}
 
 export default function Head() {
   return (

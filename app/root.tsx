@@ -7,6 +7,8 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { useNavigation } from "react-router";
+
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -24,6 +26,8 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const navigation = useNavigation();
+  const isNavigating = Boolean(navigation.location);
   return (
     <html lang="en">
       <head>
@@ -33,6 +37,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        {isNavigating && (
+          <div className="fixed inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-70 z-50">
+            global loading...
+          </div>
+        )}
         {children}
         <ScrollRestoration />
         <Scripts />
