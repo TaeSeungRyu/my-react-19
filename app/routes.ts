@@ -20,4 +20,6 @@ export default [
     ]),
   ]),
   route("action-example", "routes/action-example.tsx"),
+  route("static", "routes/static.tsx"),
+  route("suspense-fallback", "routes/suspense-fallback.tsx"),
 ] satisfies RouteConfig;

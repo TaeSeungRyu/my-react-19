@@ -50,6 +50,27 @@ export function Welcome() {
           >
             go action example
           </Link>
+          <Link
+            className="block w-full rounded-3xl border border-gray-200 p-6 dark:border-gray-700"
+            to="/static"
+          >
+            go static
+          </Link>
+          <Link
+            className="block w-full rounded-3xl border border-gray-200 p-6 dark:border-gray-700"
+            to="/suspense-fallback"
+          >
+            go suspense fallback
+          </Link>
+        </div>
+        <div className="text-lg text-gray-900 dark:text-gray-100">
+          Welcome to React Router!
+        </div>
+        <div className="text-sm text-gray-500 dark:text-gray-400">
+          This is a simple welcome page.
+        </div>
+        <div className="text-sm text-gray-500 dark:text-gray-400">
+          You can customize it as needed.
         </div>
         <div className="text-sm text-gray-500 dark:text-gray-400">
           Welcome to React Router!

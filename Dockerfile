@@ -1,3 +1,7 @@
+#docker build -t react-19-ssr .
+#docker run -d --name react-19-ssr -p 80:80 react-19-ssr    // 외부:내부
+#docker stop react-19-ssr; docker rm react-19-ssr; docker run -d --name react-19-ssr -p 80:80 react-19-ssr
+
 FROM node:20-alpine AS development-dependencies-env
 COPY . /app
 WORKDIR /app
