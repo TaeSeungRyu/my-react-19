@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, PrefetchPageLinks } from "react-router";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
@@ -59,9 +59,25 @@ export function Welcome() {
           <Link
             className="block w-full rounded-3xl border border-gray-200 p-6 dark:border-gray-700"
             to="/suspense-fallback"
+            prefetch="intent"
+            preventScrollReset
           >
             go suspense fallback
           </Link>
+          {/* 여기한번 해보자 여기한번 해보자 여기한번 해보자 */}
+          <Link
+            className="block w-full rounded-3xl border border-gray-200 p-6 dark:border-gray-700"
+            to="/big-size"
+          >
+            go big size
+          </Link>
+          <Link
+            className="block w-full rounded-3xl border border-gray-200 p-6 dark:border-gray-700"
+            to="/hooks1"
+          >
+            go hooks1
+          </Link>
+          <PrefetchPageLinks page="/big-size"></PrefetchPageLinks>
         </div>
         <div className="text-lg text-gray-900 dark:text-gray-100">
           Welcome to React Router!

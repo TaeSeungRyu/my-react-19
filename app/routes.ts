@@ -22,4 +22,6 @@ export default [
   route("action-example", "routes/action-example.tsx"),
   route("static", "routes/static.tsx"),
   route("suspense-fallback", "routes/suspense-fallback.tsx"),
+  route("big-size", "routes/big-size.tsx"),
+  route("hooks1", "routes/hooks1.tsx"),
 ] satisfies RouteConfig;

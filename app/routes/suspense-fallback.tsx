@@ -57,6 +57,11 @@ export default function SuspenseFallback() {
           )}
         />
       </React.Suspense>
+      {[...Array(30)].map((_, index) => (
+        <div key={index} className="h-4 rounded w-full mb-2">
+          test test
+        </div>
+      ))}
     </div>
   );
 }
